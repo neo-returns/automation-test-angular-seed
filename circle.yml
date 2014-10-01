@@ -1,2 +1,8 @@
 general:
-  build_dir: /
+  build_dir: app
+  
+test:
+  pre:
+    - npm install -g karma
+  override:
+    - ./scripts/test.sh
