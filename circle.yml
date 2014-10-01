@@ -2,7 +2,5 @@ general:
   build_dir: app
   
 test:
-  pre:
-    - npm install -g karma
   override:
-    - ./scripts/test.sh
+    - karma start config/karma.conf.js
