@@ -1,6 +1,2 @@
 general:
   build_dir: app
-  
-test:
-  override:
-    - karma start config/karma.conf.js
