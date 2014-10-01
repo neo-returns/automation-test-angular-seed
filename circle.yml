@@ -1,2 +1,2 @@
-general:
-  build_dir: app
+test:
+  override: npm test
