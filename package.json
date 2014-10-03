@@ -11,7 +11,7 @@
     "karma-phantomjs-launcher": "~0.1.1"
   },
   "scripts": {
-    "test": "sh scripts/test.sh",
+    "test": "sh scripts/e2e-test.sh",
     "start": "NODE_ENV=local node-dev scripts/web-server.js"
   }
 }
