@@ -22,5 +22,5 @@ deployment:
 deployment:
   staging:
     branch: master
-      heroku:
-        appname: automation-test-angular-seed
+    heroku:
+      appname: automation-test-angular-seed
