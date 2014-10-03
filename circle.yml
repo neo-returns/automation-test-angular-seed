@@ -16,6 +16,5 @@ deployment:
   hub: 
     branch: master
     commands:
-      - sed "s/<EMAIL>/$DOCKER_EMAIL/;s/<AUTH>/$DOCKER_AUTH/" \
-          < .dockercfg.template > ~/.dockercfg
+      - docker login -e="ptaylor@medullan.com" -p="Futurtech123"
       - docker push neoreturns/automation-test-angular-seed
