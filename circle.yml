@@ -16,5 +16,5 @@ deployment:
   hub: 
     branch: master
     commands:
-      - docker login -e="ptaylor@medullan.com" -p="Futurtech123"
+      - docker login -e="ptaylor@medullan.com" -p="Futurtech123" -u="neoreturns"
       - docker push neoreturns/automation-test-angular-seed
