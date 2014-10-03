@@ -1,9 +1,30 @@
 test:
   override: 
     - npm test
-        
+
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t neoreturns/automation-test-angular-seed.
+
+test:
+  override:
+    - docker run -d -p 9200:9200 neoreturns/automation-test-angular-seed; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:9200
+
 deployment:
   staging:
     branch: master
     heroku:
       appname: automation-test-angular-seed
+      
+  hub: 
+    branch: master
+    commands:
+      - sed "s/<EMAIL>/$DOCKER_EMAIL/;s/<AUTH>/$DOCKER_AUTH/" \
+          < .dockercfg.template > ~/.dockercfg
+      - docker push neoreturns/automation-test-angular-seed
