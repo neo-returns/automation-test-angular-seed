@@ -18,3 +18,9 @@ deployment:
     commands:
       - docker login -e="ptaylor@medullan.com" -p="Futurtech123" -u="neoreturns"
       - docker push neoreturns/automation-test-angular-seed
+      
+deployment:
+  staging:
+    branch: master
+      heroku:
+        appname: automation-test-angular-seed
