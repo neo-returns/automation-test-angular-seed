@@ -9,8 +9,7 @@ dependencies:
 
 test:
   override:
-    - docker run -d -p 8000:8000 neoreturns/automation-test-angular-seed; sleep 10
-    - npm test
+    - docker run -d -p 8000:8000 neoreturns/automation-test-angular-seed; sleep 10 npm test
 
 deployment:     
   hub: 
