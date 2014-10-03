@@ -5,7 +5,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build -t neoreturns/automation-test-angular-seed.
+    - docker build -t neoreturns/automation-test-angular-seed .
 
 test:
   override:
