@@ -15,6 +15,9 @@ RUN apt-get -y install nodejs nodejs-legacy npm mongodb-org
 # Install mocha
 RUN npm install -g mocha
 
+# Install phantomjs
+RUN npm install phantomjs
+
 EXPOSE 5000
 
 COPY . /src
