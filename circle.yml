@@ -23,3 +23,7 @@ deployment:
     branch: master
     heroku:
       appname: automation-test-angular-seed
+      
+general : 
+  Artifacts : 
+    -  "~ / coverage"
