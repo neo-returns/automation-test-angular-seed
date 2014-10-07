@@ -8,6 +8,11 @@ language: node_js
 node_js:
   - 0.10.25
   
+# npm install runs by default but shown here for illustrative purposes
+before_install:
+ - apt-get -y update
+ - npm install phantomjs
+  
 # Running npm test to run your test cases
 script:
  - npm test
