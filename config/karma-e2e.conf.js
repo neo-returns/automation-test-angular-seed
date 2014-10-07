@@ -37,9 +37,12 @@ module.exports = function(config){
 	
 	reporters: ['progress', 'coverage','threshold'],
 	
-	coverageReporter:
-  			type: "html",
-  			dir: process.env ['CIRCLE_ARTIFACTS'] + "/ coverage"
+	coverageReporter:{
+		type: "html",
+		dir: process.env ['CIRCLE_ARTIFACTS'] + "/ coverage"
+	}
+  			
+  			
     
 
     // the configure thresholds
