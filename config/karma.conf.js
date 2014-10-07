@@ -34,12 +34,12 @@ module.exports = function(config){
     junitReporter : {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
-    }
+    },
     
     reporters: ['progress', 'coverage','threshold'],
     
     coverageReporter: 
-  		type: "html"
+  		type: "html",
   		dir: process.env ['CIRCLE_ARTIFACTS'] + "/ coverage"
 
     // the configure thresholds
