@@ -40,11 +40,8 @@ module.exports = function(config){
 	coverageReporter:{
 		type: "html",
 		dir: process.env ['CIRCLE_ARTIFACTS'] + "/ coverage"
-	}
+	},
   			
-  			
-    
-
     // the configure thresholds
     thresholdReporter: {
       statements: 90,
