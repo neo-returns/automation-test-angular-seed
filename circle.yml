@@ -25,5 +25,5 @@ deployment:
       appname: automation-test-angular-seed
       
 general : 
-  Artifacts : 
+  artifacts : 
     -  "~ / coverage"
