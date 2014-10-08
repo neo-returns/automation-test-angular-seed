@@ -9,10 +9,11 @@
     "karma-jasmine" : "~0.1",
     "karma-ng-scenario" : "~0.1",
     "karma-phantomjs-launcher": "~0.1.1",
-    "karma-threshold-reporter": "~0.1.7"
+    "karma-threshold-reporter": "~0.1.7",
+    "karma-coverage": "~0.1"
   },
   "scripts": {
-    "test": "sh scripts/e2e-test.sh",
+    "test": "sh scripts/test.sh",
     "start": "NODE_ENV=local scripts/web-server.js"
   }
 }

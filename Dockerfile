@@ -18,6 +18,9 @@ RUN npm install -g mocha
 # Install phantomjs
 RUN npm install phantomjs
 
+# Install karma threshold reporter
+RUN npm install karma-threshold-reporter
+
 EXPOSE 5000
 
 COPY . /src

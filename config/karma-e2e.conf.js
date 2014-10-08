@@ -35,12 +35,7 @@ module.exports = function(config){
       suite: 'e2e'
     },
 	
-	reporters: ['progress', 'coverage','threshold'],
-	
-	coverageReporter:{
-		type: "html",
-		dir: process.env ['CIRCLE_ARTIFACTS'] + "/ coverage"
-	},
+	reporters: ['progress', 'threshold'],
   			
     // the configure thresholds
     thresholdReporter: {
@@ -48,6 +43,7 @@ module.exports = function(config){
       branches: 60,
       functions: 85,
       lines: 90
-    }
+    }  
+    
 })}
 

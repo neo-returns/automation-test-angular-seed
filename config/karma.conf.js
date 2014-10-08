@@ -28,7 +28,8 @@ module.exports = function(config){
             'karma-firefox-launcher',
             'karma-jasmine',
             'karma-phantomjs-launcher',
-            'karma-threshold-reporter'
+            'karma-threshold-reporter',
+            'karma-coverage'
             ],
 
     junitReporter : {
@@ -36,20 +37,27 @@ module.exports = function(config){
       suite: 'unit'
     },
     
-    reporters: ['progress', 'coverage','threshold'],
+    reporters: ['progress','coverage', 'threshold'],
     
-    coverageReporter: {
-    	type: "html",
-    	dir: process.env ['CIRCLE_ARTIFACTS'] + "/ coverage"
+    preprocessors: {
+      // source files, that you wanna generate coverage for
+      // do not include tests or libraries
+      // (these files will be instrumented by Istanbul)
+      'app/js/**/*.js': ['coverage']
     },
   		
     // the configure thresholds
     thresholdReporter: {
-      statements: 90,
+      statements: 80,
       branches: 60,
-      functions: 85,
-      lines: 90
+      functions: 50,
+      lines: 80
+    },
+    
+    // optionally, configure the reporter
+    coverageReporter: {
+      type : 'html',
+      dir : 'coverage/'
     }
 
 })}
-
