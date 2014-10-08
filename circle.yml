@@ -9,9 +9,9 @@ dependencies:
 
 test:
   override:
-     - ID=$(sudo docker run -d -p 8000:8000 neoreturns/automation-test-angular-seed; sleep 10; npm test)
+     - docker run --name testbox -d -p 8000:8000 neoreturns/automation-test-angular-seed; sleep 10; npm test
   post:
-     - docker cp ID:/automation-test-angular-seed/coverage /$CIRCLE_ARTIFACTS/coverage
+     - docker cp testbox:automation-test-angular-seed/coverage $CIRCLE_ARTIFACTS/coverage
   
 deployment:     
   hub: 
