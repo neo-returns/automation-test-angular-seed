@@ -1,4 +1,4 @@
-[ ![Codeship Status for neo-returns/automation-test-angular-seed](https://www.codeship.io/projects/38e47240-315a-0132-ddc2-0a0b60896c8a/status)](https://www.codeship.io/projects/40087)
+
 # angular-seed — the seed for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
