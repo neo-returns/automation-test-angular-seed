@@ -12,8 +12,7 @@ RUN apt-get -y update
 # Install nodejs programs TODO: update to use mongo-client
 RUN apt-get -y install nodejs nodejs-legacy npm mongodb-org
 
-# Install mocha
-RUN npm install -g mocha
+
 
 # Install phantomjs
 RUN npm install phantomjs
