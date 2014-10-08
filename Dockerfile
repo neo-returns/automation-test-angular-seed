@@ -21,6 +21,9 @@ RUN npm install phantomjs
 # Install karma threshold reporter
 RUN npm install karma-threshold-reporter
 
+# Install karma coverage
+RUN npm install karma-coverage
+
 EXPOSE 5000
 
 COPY . /src
