@@ -26,4 +26,4 @@ deployment:
       
 general : 
   artifacts : 
-    -  "~ / coverage"
+    -  "~/coverage"
