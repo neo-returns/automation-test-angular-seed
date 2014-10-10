@@ -14,6 +14,7 @@
   },
   "scripts": {
     "test": "sh scripts/test.sh",
+    "e2e": "sh scripts/e2e-test.sh",
     "start": "NODE_ENV=local scripts/web-server.js"
   }
 }

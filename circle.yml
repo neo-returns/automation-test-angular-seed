@@ -9,7 +9,9 @@ dependencies:
 
 test:
   override:
-     - docker run -d -p 8000:8000 neoreturns/automation-test-angular-seed; sleep 10; npm test
+    - case $CIRCLE_NODE_INDEX in 0) docker run -d -p 8000:8000 neoreturns/automation-test-angular-seed; sleep 10; npm test ;; 1) docker run -d -p 8000:8000 neoreturns/automation-test-angular-seed; sleep 10; sh scripts/e2e-test.sh ;; esac:
+        parallel: true
+
   
 deployment:     
   hub: 
