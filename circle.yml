@@ -3,9 +3,13 @@ machine:
     - docker
 
 dependencies:
+  cache_directories:
+    - "~/docker"    
   override:
     - docker info
+    - if [[ -e ~/docker ]]; then docker load -i ~/docker/image.tar; fi
     - docker build -t neoreturns/automation-test-angular-seed .
+    - mkdir -p ~/docker; docker save neoreturns/automation-test-angular-seed > ~/docker/image.tar
 
 test:
   override:
@@ -27,3 +31,4 @@ deployment:
 general : 
   artifacts : 
     -  "~/coverage"
+    
