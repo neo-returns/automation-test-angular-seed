@@ -1,6 +1,6 @@
 machine:
   pre: 
-    - case $CIRCLE_NODE_INDEX in 0) wget https://github.com/coreos/fleet/releases/download/v0.8.3/fleet-v0.8.3-linux-amd64.tar.gz && tar -tzvf fleet-v0.8.3-linux-amd64.tar.gz; sudo cp fleet-v0.8.3-linux-amd64/fleetctl /usr/local/bin/;chmod 400 automation-test-angular-seed/Automation.pem;ssh-add automation-test-angular-seed/Automation.pem;; esac:
+    - case $CIRCLE_NODE_INDEX in 0) wget https://github.com/coreos/fleet/releases/download/v0.8.3/fleet-v0.8.3-linux-amd64.tar.gz && tar -tzvf fleet-v0.8.3-linux-amd64.tar.gz; sleep 10; ls; sudo cp fleet-v0.8.3-linux-amd64/fleetctl /usr/local/bin/;chmod 400 automation-test-angular-seed/Automation.pem;ssh-add automation-test-angular-seed/Automation.pem;; esac:
         parallel: true
         
   services:
