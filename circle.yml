@@ -35,8 +35,7 @@ general:
   artifacts : 
     -  "~/coverage"
     
-post:
-  - case $CIRCLE_NODE_INDEX in 0) export FLEETCTL_TUNNEL=127.0.0.1:2222; fleetctl list-machines
+
   
     
 
