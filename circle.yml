@@ -1,7 +1,8 @@
 machine:
   pre: 
     - case $CIRCLE_NODE_INDEX in 0) wget https://github.com/coreos/fleet/releases/download/v0.3.2/fleet-v0.3.2-darwin-amd64.zip && unzip fleet-v0.3.2-darwin-amd64.zip; sudo cp fleet-v0.3.2-darwin-amd64/fleetctl /usr/local/bin/;chmod 400 Automation.pem;ssh-add Automation.pem;; esac:
-  
+        parallel: true
+        
   services:
     - docker
 
