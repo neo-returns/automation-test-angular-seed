@@ -27,7 +27,7 @@ deployment:
     commands:
       - docker login -e="ptaylor@medullan.com" -p="Futurtech123" -u="neoreturns"
       - docker push neoreturns/automation-test-angular-seed
-      - case $CIRCLE_NODE_INDEX in 0) fleetctl --tunnel=54.92.231.142 list-machines;fleetctl submit automation-test-angular-seed/automation-test-angular-seed.service;fleetctl start automation-test-angular-seed/automation-test-angular-seed.service;fleetctl list-units;fleetctl journal automation-test-angular-seed/automation-test-angular-seed.service ;; esac:
+      - case $CIRCLE_NODE_INDEX in 0) fleetctl --tunnel=54.92.231.142 list-machines;yes;fleetctl submit automation-test-angular-seed/automation-test-angular-seed.service;fleetctl start automation-test-angular-seed/automation-test-angular-seed.service;fleetctl list-units;fleetctl journal automation-test-angular-seed/automation-test-angular-seed.service ;; esac:
           parallel: true
           
   staging:
